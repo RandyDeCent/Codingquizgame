@@ -39,5 +39,5 @@ function checkAnswer() {
     alert("Correct!");
   } else {
     alert("Incorrect!");
-    timeLeft -= 15; // subtract from the time for an incorrect answer
+    timeLeft -= 10; // subtract from the time for an incorrect answer
   }
