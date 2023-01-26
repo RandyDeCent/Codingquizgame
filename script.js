@@ -16,3 +16,9 @@ function startQuiz() {
   showQuestion();
   timerId = setInterval(countdown, 1000);
 }
+function showQuestion() {
+  var quiz = document.getElementById("quiz");
+  quiz.innerHTML = "";
+
+  var question = document.createElement("p");
+  question.innerHTML =
