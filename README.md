@@ -22,6 +22,7 @@ SO THAT I can gauge my progress compared to my peers
 
 
 
+![coding game](https://user-images.githubusercontent.com/109132522/214970107-4219cd2f-56b0-4dd1-ba53-ff0233131761.PNG)
 
 
 
