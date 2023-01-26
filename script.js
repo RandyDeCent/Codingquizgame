@@ -8,5 +8,11 @@ var questions = [
   // add questions 
 ];
 var currentQuestion = 0;
-var timeLeft = questions.length * 15; // 15 seconds per question
+var timeLeft = questions.length * 10; // 10 seconds per question
 var timerId;
+
+function startQuiz() {
+  document.getElementById("start-button").style.display = "none";
+  showQuestion();
+  timerId = setInterval(countdown, 1000);
+}
