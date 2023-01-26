@@ -7,3 +7,6 @@ var questions = [
   },
   // add questions 
 ];
+var currentQuestion = 0;
+var timeLeft = questions.length * 15; // 15 seconds per question
+var timerId;
