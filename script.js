@@ -21,4 +21,23 @@ function showQuestion() {
   quiz.innerHTML = "";
 
   var question = document.createElement("p");
-  question.innerHTML =
+  question.innerHTML = questions[currentQuestion].question;
+  quiz.appendChild(question);
+
+  var choices = questions[currentQuestion].choices;
+  for (var i = 0; i < choices.length; i++) {
+    var choice = document.createElement("button");
+    choice.innerHTML = choices[i];
+    choice.setAttribute("value", choices[i]);
+    choice.onclick = checkAnswer;
+    quiz.appendChild(choice);
+  }
+}
+
+function checkAnswer() {
+  if (this.value == questions[currentQuestion].answer) {
+    alert("Correct!");
+  } else {
+    alert("Incorrect!");
+    timeLeft -= 15; // subtract from the time for an incorrect answer
+  }
