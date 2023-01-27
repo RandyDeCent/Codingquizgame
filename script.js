@@ -39,5 +39,34 @@ function checkAnswer() {
     alert("Correct!");
   } else {
     alert("Incorrect!");
-    timeLeft -= 10; // subtract from the time for an incorrect answer
+    timeLeft -= 10; 
+    // subtract from the time for an incorrect answer
   }
+
+  currentQuestion++;
+  if (currentQuestion == questions.length) {
+    endQuiz();
+  } else {
+    showQuestion();
+  }
+}
+
+function endQuiz() {
+  clearInterval(timerId);
+  var quiz = document.getElementById("quiz");
+  quiz.innerHTML = "";
+
+  var score = document.createElement("p");
+  score.innerHTML = "Your score: " + timeLeft + " seconds remaining";
+  quiz.appendChild(score);
+}
+
+function countdown() {
+  timeLeft--;
+  document.getElementById("timer").innerHTML =
+    "Time remaining: " + timeLeft + " seconds";
+
+  if (timeLeft == 0) {
+    endQuiz();
+  }
+}
