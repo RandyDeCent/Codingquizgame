@@ -1,14 +1,47 @@
-function startQuiz(){
-  // code to start the quiz
-}
 var questions = [
   {
-    question: "What is the syntax for creating a function in JavaScript?" 
+    question: "What is the syntax for creating a function in JavaScript?",
+    choices: [
+      "function myFunction()",
+      "var myFunction()",
+      "function:myFunction()",
+      "myFunction: function()",
+    ],
+    answer: "function myFunction()",
   },
-  // add questions 
+  {
+    question: "What is the syntax for creating a variable in JavaScript?",
+    choices: [
+      "var myVariable",
+      "new myVariable",
+      "var: myVariable",
+      "variable myVariable",
+    ],
+    answer: "var myVariable",
+  },{
+    question: "Where should you learn to code ?",
+    choices: [
+      "teacher(1)",
+      "School(2)",
+      "work(3)",
+      "home(4)",
+    ],
+    answer: "function myFunction()",
+  },{
+    question: "do you love coding?",
+    choices: [
+      "Yes()",
+      "Yes()",
+      "Yes()",
+      "Yes()",
+    ],
+    answer: "function myFunction()",
+  },
+  // add questions
 ];
+
 var currentQuestion = 0;
-var timeLeft = questions.length * 10; // 10 seconds per question
+var timeLeft = questions.length * 15; // 15 seconds per question
 var timerId;
 
 function startQuiz() {
@@ -16,6 +49,7 @@ function startQuiz() {
   showQuestion();
   timerId = setInterval(countdown, 1000);
 }
+
 function showQuestion() {
   var quiz = document.getElementById("quiz");
   quiz.innerHTML = "";
@@ -39,8 +73,7 @@ function checkAnswer() {
     alert("Correct!");
   } else {
     alert("Incorrect!");
-    timeLeft -= 10; 
-    // subtract from the time for an incorrect answer
+    timeLeft -= 15; // subtract from the time for an incorrect answer
   }
 
   currentQuestion++;
@@ -70,3 +103,4 @@ function countdown() {
     endQuiz();
   }
 }
+
